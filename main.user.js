@@ -1,7 +1,6 @@
 // ==UserScript==
 // @name         steambaidupan_unlock
-// @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.5
 // @description  万恶的steam封锁了百度盘链接，此脚本可用来解封
 // @author       Aiden
 // @match        https://steamcommunity.com/*
@@ -11,12 +10,11 @@
 
 (function() {
 
-    var temp1=document.querySelector('.bb_removedlink')
+    var uglyWhiteWords = document.querySelector(".bb_removedlink");
+    uglyWhiteWords.parentElement.removeChild(temp1);
 
-    temp1.parentElement.removeChild(temp1);
-
-    var temp2=document.querySelector('.collapsed_link')
-
-    temp2.style.display='inline'
+    var fixedALabel=document.querySelector(".collapsed_link");
+    fixedALabel.style.display = "inline";
+	fixedALabel.href = fixedALabel.innerHTML;
 
 })();
