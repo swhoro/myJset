@@ -6,7 +6,7 @@
 // @author       Aiden
 // @match        https://steamcommunity.com/*
 // @grant        none
-// @updateURL
+// @updateURL	 https://raw.githubusercontent.com/swhoro/steambaidupan_unlock/master/main.js
 // ==/UserScript==
 
 (function() {
