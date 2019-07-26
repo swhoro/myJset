@@ -10,7 +10,7 @@
 
 (function () {
     var uglyWhiteWords = document.querySelector(".bb_removedlink");
-    uglyWhiteWords.parentElement.removeChild(temp1);
+    uglyWhiteWords.parentElement.removeChild(uglyWhiteWords);
 
     var fixedALabel = document.querySelector(".collapsed_link");
     fixedALabel.style.display = "inline";
