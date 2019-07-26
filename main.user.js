@@ -8,13 +8,12 @@
 // @updateURL	 https://raw.githubusercontent.com/swhoro/steambaidupan_unlock/master/main.user.js
 // ==/UserScript==
 
-(function() {
-
+(function () {
     var uglyWhiteWords = document.querySelector(".bb_removedlink");
     uglyWhiteWords.parentElement.removeChild(temp1);
 
-    var fixedALabel=document.querySelector(".collapsed_link");
+    var fixedALabel = document.querySelector(".collapsed_link");
     fixedALabel.style.display = "inline";
-	fixedALabel.href = fixedALabel.innerHTML;
-
+    fixedALabel.href = fixedALabel.innerHTML;
+    fixedALabel.target = "_blank";
 })();
