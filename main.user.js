@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         steamDuPanUnlock
-// @version      0.8
+// @version      0.81
 // @description  万恶的steam封锁了百度盘链接，此脚本可用来解封
 // @author       Aiden
 // @match        https://steamcommunity.com/*
@@ -35,8 +35,8 @@
     //此时添加observer用来观察是否新加载了评论
     function haveAnObserve(idName) {
         //创建observeer，若新加载了评论，执行恢复链接函数
-        observer = new MutationObserver(function(chosen){
-            for(element of chosen){
+         var observer = new MutationObserver(function(chosen){
+            for(let element of chosen){
                 fixLinks(element.target);
             };
         });
@@ -49,7 +49,7 @@
     
     //提取当前页面链接
     var thisLink = location.href;
-    //判断处于评论页面或商店页面
+    //判断当前处于评论页面或商店页面
     //根据据页面的不同传递不同的评论区div id
     if (/reviews/.test(thisLink)) {
         haveAnObserve("AppHubCards");
