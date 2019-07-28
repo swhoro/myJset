@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         steamDuPanUnlock
-// @version      0.7
+// @version      0.8
 // @description  万恶的steam封锁了百度盘链接，此脚本可用来解封
 // @author       Aiden
 // @match        https://steamcommunity.com/*
