@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         steamDuPanUnlock
-// @version      0.85
+// @version      0.86
 // @description  万恶的steam封锁了百度盘链接，此脚本可用来解封
 // @author       Aiden
 // @match        https://steamcommunity.com/*
@@ -17,9 +17,9 @@
 
         //去除｛链接已删除｝字样
         var uglyWhiteWords = temp.getElementsByClassName("bb_removedlink");
-        for (let i = 0; i < uglyWhiteWords.length; i++) {
-            uglyWhiteWords[i].innerHTML = "";
-        };
+        while (uglyWhiteWords.length != 0) {
+            uglyWhiteWords[0].parentElement.removeChild(uglyWhiteWords[0]);
+        }
 
         //恢复度盘链接显示
         var fixedALabel = temp.getElementsByClassName("collapsed_link");
