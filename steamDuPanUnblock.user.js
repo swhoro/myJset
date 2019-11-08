@@ -9,6 +9,8 @@
 // ==/UserScript==
 
 (function () {
+	'use strict';
+
     //用来恢复至正常的链接
     function fixLinks(temp) {
         if (temp == "normal") {
