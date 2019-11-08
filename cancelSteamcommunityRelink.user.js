@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         cancelSteamcommunityRelink
-// @version      0.1
+// @version      0.2
 // @description  取消steam社区访问外部网站时的跳转页面
 // @author       Aiden
 // @match        https://steamcommunity.com/linkfilter/?url=*
+//@updateUrl     https://github.com/swhoro/myjset/raw/master/cancelSteamcommunityRelink.user.js
 // ==/UserScript==
 
 (function() {
