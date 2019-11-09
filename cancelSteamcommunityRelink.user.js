@@ -10,7 +10,7 @@
 (function() {
     'use strict';
 
-    var thisurl = location.href；
-    var trueurl = thisurl.substr(thisurl.indexOf("=")+1)；
-    location.href = trueurl；
+    var thisurl = location.href;
+    var trueurl = thisurl.substr(thisurl.indexOf("=")+1);
+    location.href = trueurl;
 })();
