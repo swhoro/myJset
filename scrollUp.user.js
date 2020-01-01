@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         scrollUp
-// @version      0.1
+// @version      0.2
 // @description  为steam相关页面创建一个返回顶部按钮
 // @author       Aiden
 // @match        https://store.steampowered.com/*
@@ -15,7 +15,16 @@
     //创建一个按钮div，id为btn-scrollUp
     var myScrollUp = document.createElement("div");
     //自定义按钮样式
-    myScrollUp.style.cssText = "position:fixed;bottom:5%;right:0.5%;width:60px;height:60px;background-color:#171a21;border-radius:6px;cursor:pointer;z-index:99";
+    myScrollUp.style.cssText = `
+    	position:fixed;
+    	bottom:5%;
+    	right:0.5%;
+    	width:60px;
+    	height:60px;
+    	background-color:#171a21;
+    	border-radius:6px;
+    	cursor:pointer;
+    	z-index:99`;
     //设置按钮id为btn-scrollUp
     myScrollUp.setAttribute("id","btn-scrollUp")
     document.body.appendChild(myScrollUp);
