@@ -5,3 +5,5 @@
 解除steam对百度网盘的封锁
 ### [cancelSteamcommunityRelink](https://github.com/swhoro/myjset/raw/master/cancelSteamcommunityRelink.user.js)
 取消steam社区跳转至外部页面
+### [scrollUp](https://github.com/swhoro/myjset/raw/master/scrollUp.user.js)
+在steam相关页面做一个返回顶部按钮
