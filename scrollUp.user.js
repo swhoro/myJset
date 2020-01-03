@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         scrollUp
-// @version      0.2
+// @version      0.3
 // @description  为steam相关页面创建一个返回顶部按钮
 // @author       Aiden
 // @match        https://store.steampowered.com/*
 // @match        https://steamcommunity.com/*
 // @require      https://code.jquery.com/jquery-3.4.1.min.js
-// @updateUrl    https://github.com/swhoro/myjset/raw/master/scrollUp.user.js 
+// @updateUrl    https://github.com/swhoro/myjset/raw/master/scrollUp.user.js
 // ==/UserScript==
 
 (function() {
@@ -18,7 +18,7 @@
     myScrollUp.style.cssText = `
     	position:fixed;
     	bottom:5%;
-    	right:0.5%;
+    	right:2%;
     	width:60px;
     	height:60px;
     	background-color:#171a21;
@@ -49,6 +49,20 @@
     ctx.closePath();
     ctx.fill();
 
+    //鼠标移动到按钮上时改变颜色
+    $("#btn-scrollUp").hover(function(){
+    	//鼠标移入，三角形颜色与按钮背景颜色呼唤
+        ctx.fillStyle = "#171a21";
+        ctx.fill();
+        myScrollUp.style.backgroundColor = "#c6d4df";
+    },
+        function(){
+        //鼠标移出，颜色换回
+        ctx.fillStyle = "#c6d4df";
+        ctx.fill();
+        myScrollUp.style.backgroundColor = "#171a21";
+    })
+
     //监听window的scroll事件
     $(window).scroll(function(){
         //若往下滑动超过1300像素，则显示上滑按钮，否则隐藏
@@ -58,7 +72,7 @@
             $('#btn-scrollUp').fadeOut();
         };
     });
-    
+
     //设定按钮功能，点击后返回页面顶部
     $("#btn-scrollUp").click(function(){
         $("html").animate({
