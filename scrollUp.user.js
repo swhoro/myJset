@@ -51,7 +51,7 @@
 
     //鼠标移动到按钮上时改变颜色
     $("#btn-scrollUp").hover(function(){
-    	//鼠标移入，三角形颜色与按钮背景颜色呼唤
+    	//鼠标移入，三角形颜色与按钮背景颜色互换
         ctx.fillStyle = "#171a21";
         ctx.fill();
         myScrollUp.style.backgroundColor = "#c6d4df";
