@@ -7,3 +7,5 @@
 取消steam社区跳转至外部页面
 ### [scrollUp](https://github.com/swhoro/myjset/raw/master/scrollUp.user.js)
 在steam相关页面做一个返回顶部按钮
+### [workshopAuto30](https://github.com/swhoro/myjset/raw/master/workshopAuto30.user.js)
+创意工坊订阅页面自动变为每页30个项目
