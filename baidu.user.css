@@ -2,7 +2,7 @@
 @name         百度Reforged
 // @author    Aiden
 @updateUrl    https://github.com/swhoro/myjset/raw/master/baidu.user.css
-@version      0.1
+@version      0.0.1
 ==/UserStyle== */
 
 @-moz-document regexp('https://www.baidu.com/s\?((wd)|(ie))=.*') {
