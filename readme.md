@@ -1,5 +1,8 @@
 # myJset
+我的垃圾脚本合计
+
 JS脚本需安装Tampermonkey插件
+
 CSS样式表需安装stylus插件
 ## 脚本列表
 ### [steamDuPanUnblock](https://github.com/swhoro/myjset/raw/master/steamDuPanUnblock.user.js)
