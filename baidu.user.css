@@ -25,6 +25,7 @@
     width: 672px;
     left: calc((100% - 672px) / 2);
   }
+
   /* Tab栏 */
   div.s_tab {
     padding-left: 0 !important;
@@ -36,6 +37,7 @@
   div.s_tab_inner:first-child {
     margin-left: 45px;
   }
+
   /* 搜索工具 */
   /* 未打开搜索工具 */
   div.nums {
@@ -49,6 +51,21 @@
     width: 665px;
     text-align: left;
   }
+
+  /* 价格仅供参考 */
+  div.hint_common_restop {
+    margin: 0 auto !important;
+    width: 650px;
+    font-size: 30px;
+    color: red;
+    text-align: center;
+  }
+
+  /* 为您推荐 */
+  div.fhmYEeop_rs {
+    display: none;
+  }
+
   /* 搜索结果 */
   div#wrapper_wrapper {
     background-color: #f7f7f7;
@@ -80,6 +97,7 @@
     border-color: #f7f7f7;
     box-shadow: none;
   }
+
   /* 相关搜索 */
   div#rs {
     margin: 20px auto 0px auto !important;
@@ -88,13 +106,15 @@
   div#rs > table {
     margin: 0 auto !important;
   }
-  /* 页数 */
+
+  /* 页码 */
   div#page {
     text-align: center;
   }
   div.page-inner {
     padding-right: 140px !important;
   }
+
   /* 页脚 */
   div.foot-inner {
     text-align: center;
