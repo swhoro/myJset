@@ -2,7 +2,7 @@
 @name         百度Reforged
 @author       Aiden
 @namespace    https://github.com/swhoro
-@version      0.0.2
+@version      0.0.3
 ==/UserStyle== */
 
 @-moz-document regexp('https://www.baidu.com/s\?((wd)|(ie))=.*') {
@@ -59,11 +59,6 @@
     font-size: 30px;
     color: red;
     text-align: center;
-  }
-
-  /* 为您推荐 */
-  div.fhmYEeop_rs {
-    display: none;
   }
 
   /* 搜索结果 */
