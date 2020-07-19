@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         trueLevel
-// @version      0.0.1
+// @version      0.0.2
 // @description  真正的steam等级，排除汽车大奖赛的徽章
 // @author       Aiden
 // @match        https://steamcommunity.com/id/*
@@ -119,7 +119,6 @@
         top:0;right:0;
         height:48px;
         margin:0;
-        padding-right:5px;
         padding-right:5px;
         line-height:48px;
         font-size:15px`;
