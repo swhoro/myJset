@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         scrollUp
-// @version      0.3
+// @version      0.0.3
 // @description  为steam相关页面创建一个返回顶部按钮
 // @author       Aiden
 // @match        https://store.steampowered.com/*

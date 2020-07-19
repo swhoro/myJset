@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         workshopAuto30
-// @version      0.21
+// @version      0.2.1
 // @description  创意工坊订阅页面自动变为每页30个项目
 // @author       Aiden
 // @match        https://steamcommunity.com/id/*/myworkshopfiles/*
