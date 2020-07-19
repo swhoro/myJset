@@ -60,11 +60,12 @@
     // t代表等级的去掉个位数的部分
     // 如0 ~ 10级时t为0，10 ~ 20级时t为1，2880 ~ 2890级时t为288
     t = parseInt(t);
-    // eachEXP时在此区间内（如上所述10级一区间），每级所需经验值
+    // eachEXP为在此区间内（如上所述每10级划分一区间），每升一级所需经验值
     let eachEXP = 100 * (t + 1);
-    // headEXP为区间内首项等级经验值，如t=0时为0级所需经验值（为0），t=288时为2880级所需经验值（为41616000）
+    // head开头为区间首项等级，包括等级和所需经验值
     let headEXP = (1000 * (1 + t) * t) / 2;
     let headLevel = 10 * t;
+    // dif开头为真实等级与区间首项等级之差，包括等级差和经验值之差
     let difEXP = trueEXP - headEXP;
     let difLevel = parseInt(difEXP / eachEXP);
     let trueLevel = headLevel + difLevel;
@@ -88,7 +89,7 @@
 
   // 判断是否处于个人页面
   if (regProfile.test(URL)) {
-    let baseUrl = location.href;
+    let baseUrl = URL;
     //获取真实等级
     let trueLevel = await getTrueLevel(baseUrl);
 
@@ -96,7 +97,10 @@
     let trueLevelP = document.createElement("p");
     trueLevelP.innerHTML = trueLevel + "级";
     trueLevelP.title = "真实等级";
-    trueLevelP.style.cssText = "display:inline;margin-left:10px;color:#C97546;";
+    trueLevelP.style.cssText = `
+      display:inline;
+      margin-left:10px;
+      color:#C97546;`;
     let levelDiv = document.querySelector("div.persona_level");
     levelDiv.appendChild(trueLevelP);
   }
