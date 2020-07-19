@@ -60,9 +60,6 @@
     console.log(fakeBadge);
     console.log("nowEXP = " + nowEXP);
     console.log("trueEXP = " + trueEXP);
-    console.log("eachEXP = " + eachEXP);
-    console.log("headEXP = " + headEXP);
-    console.log("headLevel = " + headLevel);
     console.log("trueLevel = " + trueLevel);
     return trueLevel;
   }
