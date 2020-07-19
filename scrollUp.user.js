@@ -5,7 +5,7 @@
 // @author       Aiden
 // @match        https://store.steampowered.com/*
 // @match        https://steamcommunity.com/*
-// @require      https://code.jquery.com/jquery-3.4.1.min.js
+// @require      https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js
 // @updateUrl    https://github.com/swhoro/myjset/raw/master/scrollUp.user.js
 // ==/UserScript==
 
