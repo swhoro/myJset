@@ -18,7 +18,7 @@
     // 将纯文本HTML转化为Document
     function parseDom(str) {
       let domparser = new DOMParser();
-      let doc = domparser.parseFromString(str, "text/html")
+      let doc = domparser.parseFromString(str, "text/html");
       return doc;
     }
 
@@ -105,21 +105,21 @@
     levelDiv.appendChild(trueLevelP);
   }
 
-    // 判断是否处于好友页面
-    if (regFriends.test(URL)) {
-      // 获取所有的好友block
-      let allFriends = document.querySelectorAll("div.friend_block_v2");
-      // 为每个好友block添加等级
-      allFriends.forEach(async function(item) {
-        // 获取steamid
-        let baseUrl = item.childNodes[3].href;
-        let trueLevel = await getTrueLevel(baseUrl);
+  // 判断是否处于好友页面
+  if (regFriends.test(URL)) {
+    // 获取所有的好友block
+    let allFriends = document.querySelectorAll("div.friend_block_v2");
+    // 为每个好友block添加等级
+    allFriends.forEach(async function(item) {
+      // 获取steamid
+      let baseUrl = item.childNodes[3].href;
+      let trueLevel = await getTrueLevel(baseUrl);
 
-        // 插入真实等级到好友block右边
-        let trueLevelP = document.createElement("p");
-        trueLevelP.innerHTML = trueLevel + "级";
-        trueLevelP.title = "真实等级";
-        trueLevelP.style.cssText = `
+      // 插入真实等级到好友block右边
+      let trueLevelP = document.createElement("p");
+      trueLevelP.innerHTML = trueLevel + "级";
+      trueLevelP.title = "真实等级";
+      trueLevelP.style.cssText = `
             display:block;
             color:#C97546;
             position:absolute;
@@ -129,7 +129,7 @@
             padding-right:5px;
             line-height:48px;
             font-size:15px`;
-        item.appendChild(trueLevelP);
-      });
-    }
+      item.appendChild(trueLevelP);
+    });
+  }
 })();
