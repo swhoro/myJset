@@ -13,7 +13,7 @@ CSS样式需安装stylus插件
 在steam相关页面做一个返回顶部按钮
 ### [workshopAuto30](https://github.com/swhoro/myjset/raw/master/workshopAuto30.user.js)
 创意工坊订阅页面自动变为每页30个项目
-### [trueLevel](https://github.com/swhoro/myjset/raw/master/trueLevel.user.js)
+### [trueLevel](https://github.com/swhoro/myjset/raw/master/trueLevelV2.user.js)
 在好友和个人资料页面显示真实等级
 
 ## CSS样式文件
