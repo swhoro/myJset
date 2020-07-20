@@ -13,8 +13,11 @@ CSS样式需安装stylus插件
 在steam相关页面做一个返回顶部按钮
 ### [workshopAuto30](https://github.com/swhoro/myjset/raw/master/workshopAuto30.user.js)
 创意工坊订阅页面自动变为每页30个项目
-### [trueLevel](https://github.com/swhoro/myjset/raw/master/trueLevelV2.user.js)
+### [trueLevel](https://github.com/swhoro/myjset/raw/master/trueLevelLazy.user.js)
 在好友和个人资料页面显示真实等级
+无后缀为使用api版本
+V2后缀为无需api版本
+Lazy为无需api、懒加载版本（默认）
 
 ## CSS样式文件
 ### [baiduReforged](https://github.com/swhoro/myjset/raw/master/baidu.user.css)
