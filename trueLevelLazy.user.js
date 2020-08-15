@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         trueLevelLazy
-// @version      0.1.0
+// @version      0.1.1
 // @description  真正的steam等级，排除汽车大奖赛的徽章
 // @author       Aiden
 // @match        https://steamcommunity.com/id/*
@@ -96,7 +96,6 @@
     // 插入真实等级到等级后面
     let trueLevelP = document.createElement("p");
     trueLevelP.innerHTML = trueLevel + "级";
-    trueLevelP.title = "真实等级";
     trueLevelP.style.cssText = `
         display:inline;
         margin-left:10px;
@@ -120,8 +119,7 @@
       let trueLevel = await getTrueLevel(baseUrl);
       // 插入真实等级到好友block右边
       let trueLevelP = document.createElement("p");
-      trueLevelP.innerHTML = trueLevel + "级";
-      trueLevelP.title = "真实等级";
+      trueLevelP.innerHTML = trueLevel + " 级";
       trueLevelP.style.cssText = `
           display:block;
           color:#C97546;
