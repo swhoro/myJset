@@ -2,10 +2,9 @@
 @name         百度Reforged
 @author       Aiden
 @namespace    https://github.com/swhoro
-@version      0.0.4
+@version      0.0.5
 ==/UserStyle== */
-
-@-moz-document regexp('https://www.baidu.com/s\?((wd)|(ie)|(tn))=.*') {
+@-moz-document regexp('https://www.baidu.com/s\?\&?((wd)|(ie)|(tn))=.*') {
   /* 头栏 */
   div#head {
     background-color: #f7f7f7;
@@ -66,21 +65,21 @@
     background-color: #f7f7f7;
   }
   #container {
-    margin: 0 auto;
+    margin: 0 auto !important;
     text-align: center;
   }
   #content_left {
     margin: 0 auto;
-    width: 630px;
+    width: 620px !important;
     padding: 0 !important;
     float: none;
   }
   div.c-container {
     text-align: left;
+    /* margin-right: 0;
+    margin-left: 0; */
     margin: 0 auto;
-    margin-right: 0;
     transition-duration: 0.4s;
-    width: 570px;
     padding: 25px 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     border-radius: 4px;
@@ -88,17 +87,21 @@
   div.c-container:hover {
     box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
   }
+  div.c-container h3 {
+    font-size: 18px !important;
+  }
   div.c-border {
     border-color: #f7f7f7;
     box-shadow: none;
   }
+  /* 搜索结果中关键词 */
   div.c-container em {
     text-decoration: none;
   }
 
   /* 相关搜索 */
   div#rs {
-    margin: 20px auto 0px auto !important;
+    margin: 40px auto 0px auto !important;
     background-color: #f7f7f7;
   }
   div#rs > table {
