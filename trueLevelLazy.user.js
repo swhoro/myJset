@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         trueLevelLazy
-// @version      0.1.1
+// @version      0.1.2
 // @description  真正的steam等级，排除汽车大奖赛的徽章
 // @author       Aiden
 // @match        https://steamcommunity.com/id/*
@@ -70,10 +70,7 @@
     let difLevel = parseInt(difEXP / eachEXP);
     let trueLevel = headLevel + difLevel;
 
-    // 控制台输出一些信息，返回真实等级
-    console.log("nowEXP = " + nowEXP);
-    console.log("trueEXP = " + trueEXP);
-    console.log("trueLevel = " + trueLevel);
+    // 返回真实等级
     return trueLevel;
   }
 
