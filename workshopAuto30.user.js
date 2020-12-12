@@ -4,7 +4,7 @@
 // @description  创意工坊订阅页面自动变为每页30个项目
 // @author       Aiden
 // @match        https://steamcommunity.com/id/*/myworkshopfiles/*
-// @updateURL    https://github.com/swhoro/myjset/raw/master/workshopAuto30.user.js
+// @updateURL    https://github.com/swhoro/myJset/raw/master/workshopAuto30.user.js
 // ==/UserScript==
 
 (function() {

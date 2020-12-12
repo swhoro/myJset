@@ -4,7 +4,7 @@
 // @description  为osu!添加一个不快速下载不需视频文件得按钮
 // @author       Aiden
 // @match        https://osu.ppy.sh/beatmapsets?q=*
-@updateUrl    https://github.com/swhoro/myjset/raw/master/osu.user.js
+@updateUrl    https://github.com/swhoro/myJset/raw/master/osu.user.js
 // ==/UserScript==
 
 window.onload = function() {

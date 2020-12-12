@@ -5,7 +5,7 @@
 // @author       Aiden
 // @match        https://steamcommunity.com/id/*
 // @match        https://steamcommunity.com/profiles/*
-// @updateUrl    https://github.com/swhoro/myjset/raw/master/trueLevelV2.user.js
+// @updateUrl    https://github.com/swhoro/myJset/raw/master/trueLevelV2.user.js
 // ==/UserScript==
 
 (async function() {

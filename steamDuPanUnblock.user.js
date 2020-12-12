@@ -5,7 +5,7 @@
 // @author       Aiden
 // @match        https://steamcommunity.com/*
 // @match        https://store.steampowered.com/*
-// @updateURL	 https://github.com/swhoro/myjset/raw/master/steamDuPanUnblock.user.js
+// @updateURL	 https://github.com/swhoro/myJset/raw/master/steamDuPanUnblock.user.js
 // ==/UserScript==
 
 (function () {

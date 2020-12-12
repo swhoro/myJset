@@ -4,7 +4,7 @@
 // @description  取消steam社区访问外部网站时的跳转页面
 // @author       Aiden
 // @match        https://steamcommunity.com/linkfilter/?url=*
-// @updateUrl     https://github.com/swhoro/myjset/raw/master/cancelSteamcommunityRelink.user.js
+// @updateUrl     https://github.com/swhoro/myJset/raw/master/cancelSteamcommunityRelink.user.js
 // ==/UserScript==
 
 (function() {
