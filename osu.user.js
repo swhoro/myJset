@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         osu!下载不含视频文件
-// @version      0.0.1
+// @version      0.0.2
 // @description  为osu!搜索页面添加一个下载不需视频文件的按钮
 // @author       Aiden
 // @match        https://osu.ppy.sh/beatmapsets?q=*
@@ -16,7 +16,7 @@ window.onload = function() {
     i.forEach(function(item) {
       let newItem = item.cloneNode(true);
       newItem.firstChild.title = "下载不包含视频";
-      newItem.firstChild.href = item.href + "?noVideo=1";
+      newItem.firstChild.href = item.firstChild.href + "?noVideo=1";
       newItem.firstChild.setAttribute("data-orig-title", "下载不包含视频")
       newItem.style="margin-left: 4px;"
       item.parentElement.appendChild(newItem);
