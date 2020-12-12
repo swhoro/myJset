@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         osu!下载不含视频文件
 // @version      0.0.1
-// @description  为osu!添加一个不快速下载不需视频文件得按钮
+// @description  为osu!搜索页面添加一个下载不需视频文件的按钮
 // @author       Aiden
 // @match        https://osu.ppy.sh/beatmapsets?q=*
 // @updateUrl    https://github.com/swhoro/myJset/raw/master/osu.user.js
