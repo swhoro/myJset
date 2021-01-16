@@ -26,6 +26,9 @@ V2后缀为无需api版本
 
 Lazy为无需api、懒加载版本（默认）
 
+### [gamesWithoutCloud](https://github.com/swhoro/myJset/raw/master/gamesWithoutCloud.user.js)
+找寻没有云存档的游戏
+
 ### [osu](https://github.com/swhoro/myJset/raw/master/osu.user.js)
 为osu!搜索页面添加一个下载不需视频文件的按钮
 
