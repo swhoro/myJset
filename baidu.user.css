@@ -2,134 +2,142 @@
 @name         百度Reforged
 @author       Aiden
 @namespace    https://github.com/swhoro
-@version      0.0.6
+@version      0.0.7
 ==/UserStyle== */
-@-moz-document regexp('https://www.baidu.com/s\?\&?((wd)|(ie)|(tn))=.*') {
-	/* 头栏 */
-	div#head {
-		background-color: #f7f7f7;
-	}
-	.s_form {
-		padding: 0 !important;
-	}
-	a#result_logo {
-		position: absolute;
-		top: 0;
-		margin-top: 19px !important;
-		left: calc((100% - 672px) / 2 - 110px);
-	}
-	form#form {
-		position: absolute;
-		margin: 15px auto;
-		width: 672px;
-		left: calc((100% - 672px) / 2);
-	}
+@-moz-document regexp('https://www.baidu.com/s\?\&?((wd)|(ie)|(tn))=.*')
+{
+    /* 头栏 */
+    div#head {
+        background-color: #f7f7f7;
+    }
+    .s_form {
+        padding: 0 !important;
+    }
+    a#result_logo {
+        position: absolute;
+        top: 0;
+        margin-top: 19px !important;
+        left: calc((100% - 672px) / 2 - 110px);
+    }
+    form#form {
+        position: absolute;
+        margin: 15px auto;
+        width: 672px;
+        left: calc((100% - 672px) / 2);
+    }
 
-	/* Tab栏 */
-	div.s_tab {
-		padding-left: 0 !important;
-		background-color: #f7f7f7 !important;
-	}
-	div.s_tab_inner {
-		text-align: center;
-	}
-	div.s_tab_inner:first-child {
-		margin-left: 45px;
-	}
+    /* Tab栏 */
+    div.s_tab {
+        padding-left: 0 !important;
+        background-color: #f7f7f7 !important;
+    }
+    div.s_tab_inner {
+        text-align: center;
+    }
+    div.s_tab_inner:first-child {
+        margin-left: 45px;
+    }
 
-	/* 搜索工具 */
-	/* 未打开搜索工具 */
-	div.nums {
-		margin: 0 auto !important;
-		width: 665px;
-		text-align: left;
-	}
-	/* 已打开搜索工具 */
-	div.search_tool_conter {
-		margin: 0 auto !important;
-		width: 665px;
-		text-align: left;
-	}
+    /* 搜索工具 */
+    /* 未打开搜索工具 */
+    div.nums {
+        margin: 0 auto !important;
+        width: 665px;
+        text-align: left;
+    }
+    /* 已打开搜索工具 */
+    div.search_tool_conter {
+        margin: 0 auto !important;
+        width: 665px;
+        text-align: left;
+    }
 
-	/* 价格仅供参考 */
-	div.hint_common_restop {
-		margin: 0 auto !important;
-		height: 40px;
-		width: 650px;
-		font-size: 30px;
-		line-height: 40px;
-		padding-bottom: 4px;
-		color: red;
-		text-align: center;
-	}
+    /* 价格仅供参考 */
+    div.hint_common_restop {
+        margin: 0 auto !important;
+        height: 40px;
+        width: 650px;
+        font-size: 30px;
+        line-height: 40px;
+        padding-bottom: 4px;
+        color: red;
+        text-align: center;
+    }
 
-	/* 搜索结果 */
-	div#wrapper_wrapper {
-		background-color: #f7f7f7;
-	}
-	#container {
-		margin: 0 auto !important;
-		text-align: center;
-	}
-	#content_left {
-		margin: 0 auto;
-		width: 620px !important;
-		padding: 0 !important;
-		float: none;
-	}
-	#content_left > .c-container {
-		text-align: left;
-		width: 560px;
-		margin: 0 auto;
-		transition-duration: 0.4s;
-		padding: 25px 30px;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-		border-radius: 4px;
-	}
-	#content_left > .c-container:hover {
-		box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
-	}
-	#content_left > .c-container h3 {
-		font-size: 16px !important;
-	}
-	.c-container > .c-container {
-		margin-bottom: 0 !important;
-	}
-	div.c-border {
-		border-color: #f7f7f7 !important;
-		box-shadow: none !important;
-	}
-	/* 搜索结果中标题下划线 */
-	div.c-container h3 a, div.c-container h3 em{
-		text-decoration: none;
-	}
-	ul.subLink_answer a, ul.subLink_answer a > em{
-		text-decoration: none;
-	}
+    /* 简单移除右侧广告 */
+    div#content_right {
+        display: none;
+    }
 
-	/* 相关搜索 */
-	div#rs {
-		margin: 40px auto 0px auto !important;
-		background-color: #f7f7f7;
-	}
-	div#rs > table {
-		margin: 0 auto !important;
-	}
+    /* 搜索结果 */
+    div#wrapper_wrapper {
+        background-color: #f7f7f7;
+    }
+    #container {
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    #content_left {
+        margin: 0 auto;
+        width: 620px !important;
+        padding: 0 !important;
+        float: none;
+    }
+    #content_left > .c-container {
+        text-align: left;
+        width: 560px;
+        margin: 0 auto;
+        transition-duration: 0.4s;
+        padding: 25px 30px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+    }
+    #content_left > .c-container:hover {
+        box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+    }
+    #content_left > .c-container h3 {
+        font-size: 16px !important;
+    }
+    .c-container > .c-container {
+        margin-bottom: 0 !important;
+    }
+    div.c-border {
+        border-color: #f7f7f7 !important;
+        box-shadow: none !important;
+    }
+    /* 搜索结果中标题下划线 */
+    div.c-container h3 a,
+    div.c-container h3 em {
+        text-decoration: none;
+    }
+    ul.subLink_answer a,
+    ul.subLink_answer a > em {
+        text-decoration: none;
+    }
 
-	/* 页码 */
-	div#page {
-		text-align: center;
-	}
-	div.page-inner {
-		padding-right: 140px !important;
-	}
+    /* 相关搜索 */
+    div#rs {
+        margin: 40px auto 0px auto !important;
+        background-color: #f7f7f7;
+    }
+    div#rs > table {
+        margin: 0 auto !important;
+    }
 
-	/* 页脚 */
-	div.foot-inner {
-		text-align: center;
-	}
-	span#help {
-		float: none !important;
-		padding-right: 140px;
-	}
+    /* 页码 */
+    div#page {
+        text-align: center;
+    }
+    div.page-inner {
+        padding-right: 140px !important;
+    }
+
+    /* 页脚 */
+    div.foot-inner {
+        text-align: center;
+    }
+    span#help {
+        float: none !important;
+        padding-right: 140px;
+    }
 }

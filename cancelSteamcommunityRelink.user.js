@@ -7,10 +7,10 @@
 // @updateUrl     https://github.com/swhoro/myJset/raw/master/cancelSteamcommunityRelink.user.js
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
     var thisurl = location.href;
-    var trueurl = thisurl.substr(thisurl.indexOf("=")+1);
+    var trueurl = thisurl.substr(thisurl.indexOf("=") + 1);
     location.href = trueurl;
 })();

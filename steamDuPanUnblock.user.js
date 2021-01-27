@@ -9,13 +9,13 @@
 // ==/UserScript==
 
 (function () {
-	'use strict';
+    "use strict";
 
     //用来恢复至正常的链接
     function fixLinks(temp) {
         if (temp == "normal") {
             temp = document;
-        };
+        }
 
         //去除｛链接已删除｝字样
         var uglyWhiteWords = temp.getElementsByClassName("bb_removedlink");
@@ -29,7 +29,7 @@
             fixedALabel[i].style.display = "inline";
             fixedALabel[i].href = fixedALabel[i].innerHTML;
             fixedALabel[i].target = "_blank";
-        };
+        }
     }
 
     //对于评论页面与商店页面，可能无法加载完成
@@ -39,12 +39,12 @@
         var observer = new MutationObserver(function (chosen) {
             for (let element of chosen) {
                 fixLinks(element.target);
-            };
+            }
         });
 
         //将observer绑定至评论区，观察是否有子节点变化
         observer.observe(document.getElementById(idName), {
-            childList: true
+            childList: true,
         });
     }
 

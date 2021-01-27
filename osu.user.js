@@ -9,36 +9,38 @@
 
 window.onload = function () {
     "use strict";
-  
+
     function addAButton(target = document) {
-      let items = target.querySelectorAll("div.beatmapset-panel__icons-box");
-  
-      for (let i = 0; i < items.length; i++) {
-        let item = items[i];
-        if (item.firstChild.title == "下载") continue;
-        let newItem = item.cloneNode(true);
-        newItem.firstChild.title = "下载不包含视频";
-        newItem.firstChild.href = item.firstChild.href + "?noVideo=1";
-        newItem.firstChild.setAttribute("data-orig-title", "下载不包含视频");
-        newItem.style = "margin-left: 4px;";
-        item.parentElement.appendChild(newItem);
-      }
+        let items = target.querySelectorAll("div.beatmapset-panel__icons-box");
+
+        for (let i = 0; i < items.length; i++) {
+            let item = items[i];
+            if (item.firstChild.title == "下载") continue;
+            let newItem = item.cloneNode(true);
+            newItem.firstChild.title = "下载不包含视频";
+            newItem.firstChild.href = item.firstChild.href + "?noVideo=1";
+            newItem.firstChild.setAttribute(
+                "data-orig-title",
+                "下载不包含视频"
+            );
+            newItem.style = "margin-left: 4px;";
+            item.parentElement.appendChild(newItem);
+        }
     }
-  
+
     addAButton();
-  
+
     function callback(mutationlists, observer) {
-      mutationlists.forEach((mutationlist) => {
-        mutationlist.addedNodes.forEach((node) => {
-          addAButton(node.firstChild);
-          addAButton(node.lastChild);
+        mutationlists.forEach((mutationlist) => {
+            mutationlist.addedNodes.forEach((node) => {
+                addAButton(node.firstChild);
+                addAButton(node.lastChild);
+            });
         });
-      });
     }
-  
+
     var observer = new MutationObserver(callback);
     observer.observe(document.querySelector("div.beatmapsets__items"), {
-      childList: true,
+        childList: true,
     });
-  };
-  
+};
