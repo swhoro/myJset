@@ -108,7 +108,7 @@
     /* 搜索结果中标题下划线 */
     div.c-container h3 a,
     div.c-container h3 em {
-        text-decoration: none;
+        text-decoration: none !important;
     }
     ul.subLink_answer a,
     ul.subLink_answer a > em {
