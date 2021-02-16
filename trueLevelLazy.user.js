@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         trueLevelLazy
+// @namespace    https://https://github.com/swhoro
 // @version      0.1.2
 // @description  真正的steam等级，排除汽车大奖赛的徽章
 // @author       Aiden
 // @match        https://steamcommunity.com/id/*
 // @match        https://steamcommunity.com/profiles/*
-// @updateUrl    https://github.com/swhoro/myJset/raw/master/trueLevelLazy.user.js
+// @updateURL    https://github.com/swhoro/myJset/raw/master/trueLevelLazy.user.js
 // ==/UserScript==
 
 (async function () {

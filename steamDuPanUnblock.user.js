@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         steamDuPanUnblock
+// @namespace    https://https://github.com/swhoro
 // @version      1.0.1
 // @description  万恶的steam封锁了百度盘链接，此脚本可用来解封
 // @author       Aiden

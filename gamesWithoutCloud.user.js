@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         gamesWithoutCloud
+// @namespace    https://https://github.com/swhoro
 // @version      0.0.1
 // @description  找寻没有云存档的游戏
 // @author       Aiden

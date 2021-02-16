@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         workshopAuto30
+// @namespace    https://https://github.com/swhoro
 // @version      0.2.1
 // @description  创意工坊订阅页面自动变为每页30个项目
 // @author       Aiden

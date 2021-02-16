@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         osu!下载不含视频文件
+// @namespace    https://https://github.com/swhoro
 // @version      0.0.3
 // @description  为osu!搜索页面添加一个下载不需视频文件的按钮
 // @author       Aiden

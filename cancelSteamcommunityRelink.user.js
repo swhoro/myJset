@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         cancelSteamcommunityRelink
+// @namespace    https://https://github.com/swhoro
 // @version      0.0.4
 // @description  取消steam社区访问外部网站时的跳转页面
 // @author       Aiden

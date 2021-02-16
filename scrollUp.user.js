@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         scrollUp
+// @namespace    https://https://github.com/swhoro
 // @version      0.0.3
 // @description  为steam相关页面创建一个返回顶部按钮
 // @author       Aiden

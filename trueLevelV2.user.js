@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         trueLevelV2
+// @namespace    https://https://github.com/swhoro
 // @version      0.0.3
 // @description  真正的steam等级，排除汽车大奖赛的徽章
 // @author       Aiden
 // @match        https://steamcommunity.com/id/*
 // @match        https://steamcommunity.com/profiles/*
-// @updateUrl    https://github.com/swhoro/myJset/raw/master/trueLevelV2.user.js
+// @updateURL    https://github.com/swhoro/myJset/raw/master/trueLevelV2.user.js
 // ==/UserScript==
 
 (async function () {
