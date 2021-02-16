@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         toCNY
 // @namespace    https://https://github.com/swhoro
-// @version      0.0.1
+// @version      0.0.2
 // @description  steam低价区价格改为人民币显示
 // @author       Aiden
 // @match        https://store.steampowered.com/app/*
@@ -115,7 +115,7 @@
 
         // 写入汇率和下次更新汇率时间
         GM_setValue(currency, exrate);
-        GM_setValue("next_time", time + 3600000);
+        GM_setValue("next_time", time + 3600000 * 12);
         printFormate("updat exrate: " + exrate);
     }
 })();
