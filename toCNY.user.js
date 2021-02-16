@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         toCNY
-// @namespace    https://https://github.com/swhoro
+// @namespace    https://github.com/swhoro
 // @version      0.0.2
 // @description  steam低价区价格改为人民币显示
 // @author       Aiden
