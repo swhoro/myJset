@@ -38,9 +38,11 @@ Lazy 为无需 api、懒加载版本（默认）
 
 找寻没有云存档的游戏
 
-### [gamesWithoutCloud](https://github.com/swhoro/myJset/raw/master/toCNY.user.js)
+### [toCNY](https://github.com/swhoro/myJset/raw/master/toCNY.user.js)
 
 利用Augmented Steam插件，将其他区价格显示为人名币
+
+![image](https://user-images.githubusercontent.com/34229589/108024171-0dc2b400-705f-11eb-8169-45fc0705c544.png)
 
 ### [osu](https://github.com/swhoro/myJset/raw/master/osu.user.js)
 
