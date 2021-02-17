@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         toCNY
 // @namespace    https://github.com/swhoro
-// @version      0.0.3
+// @version      0.0.4
 // @description  steam低价区价格改为人民币显示
 // @author       Aiden
 // @match        https://store.steampowered.com/app/*
@@ -81,15 +81,29 @@
             let time = new Date();
             time = time.getTime();
 
+            let output;
             // 判断是否需要更新汇率
             if (exrate == undefined || time > next_time) {
                 await setExrate(currency, time);
-                printFormate("下次更新时间：");
-                console.log(new Date(time));
+                output = new Date(time);
             } else {
-                printFormate("下次更新时间：");
-                console.log(new Date(next_time));
+                output = new Date(next_time);
             }
+            let month = output.getMonth() + 1;
+            let date = output.getDate();
+            let hour = output.getHours();
+            let minute = output.getMinutes();
+            printFormate(
+                "下次更新时间：" +
+                    month +
+                    " 月 " +
+                    date +
+                    " 日 " +
+                    hour +
+                    " 时 " +
+                    minute +
+                    " 分"
+            );
             done = 1;
         }
 
