@@ -21,10 +21,9 @@
 
     let url = window.location.href;
     let testReg = new RegExp("^https://keylol.com/t\\d{6}-1-1$");
-    let result = testReg.test(url);
 
     // 当页面为某一帖子时，插入histories数组
-    if (result) {
+    if (testReg.test(url)) {
         // 当出现重复帖子时，删除以前历史记录，新增一个历史记录
         histories.forEach((history, index, histories) => {
             if (history.url == url) {
