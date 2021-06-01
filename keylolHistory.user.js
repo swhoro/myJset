@@ -11,6 +11,9 @@
 // ==/UserScript==
 
 (function () {
+    // 当页面中存在iframe时，不在iframe中运行脚本
+    if (window.top != window.self) return;
+
     let histories = GM_getValue("histories");
     if (histories == null) {
         histories = [];
@@ -167,6 +170,4 @@
             historyPanel.style.visibility = "hidden";
         }
     });
-
-    console.log(histories);
 })();
