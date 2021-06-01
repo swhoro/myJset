@@ -38,15 +38,9 @@ Lazy 为无需 api、懒加载版本（默认）
 
 找寻没有云存档的游戏
 
-### [toCNY](https://github.com/swhoro/myJset/raw/master/toCNY.user.js)
+### [keylolHistory](https://github.com/swhoro/myJset/raw/master/keylolHistory.user.js)
 
-利用Augmented Steam插件，将其他区价格显示为人名币
-
-![image](https://user-images.githubusercontent.com/34229589/108024171-0dc2b400-705f-11eb-8169-45fc0705c544.png)
-
-### [osu](https://github.com/swhoro/myJset/raw/master/osu.user.js)
-
-为 osu!搜索页面添加一个下载不需视频文件的按钮
+为 keylol 社区添加历史记录功能，按钮在头像下拉栏
 
 ## CSS 样式文件
 

@@ -25,18 +25,19 @@
     // 当页面为某一帖子时，插入histories数组
     if (testReg.test(url)) {
         // 当出现重复帖子时，删除以前历史记录，新增一个历史记录
-        histories.forEach((history, index, histories) => {
-            if (history.url == url) {
-                histories.splice(index, 1);
+        for (let i = 0; i < histories.length; i++) {
+            if (histories[i].url == url) {
+                histories.splice(i, 1);
+                break;
             }
-        });
+        }
         let date = new Date();
         let hour = date.getHours();
         if (hour <= 9) hour = "0" + hour;
         let minute = date.getMinutes();
         if (minute <= 9) minute = "0" + minute;
         let time = "" + date.getMonth() + "月" + date.getDay() + "日 " + hour + ":" + minute;
-        thisHistory = {
+        let thisHistory = {
             url: url,
             title: document.title,
             time: time,
@@ -52,7 +53,6 @@
     let dropdown = document.getElementsByClassName("dropdown-menu-right")[0];
     let referenceNode = dropdown.children[location];
     let historyButton = document.createElement("li");
-    // historyButton.id = "history-button";
     historyButton.innerHTML = "<a>历史</a>";
     historyButton.style.cssText = `
         cursor: pointer;
@@ -61,15 +61,14 @@
 
     // 创建 历史 面板
     let historyPanel = document.createElement("div");
-    // historyPanel.id = "history-panel";
     historyPanel.style.cssText = `
         width: 35vw;
         height: 45vh;
         position: absolute;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        top: 13vh;
+        align-items: center;
+        top: 12vh;
         right: 15vw;
         z-index: 99;
         background-color: white;
@@ -82,87 +81,127 @@
     historiesDisplayDiv.id = "history-display-div";
     historiesDisplayDiv.style.cssText = `
         margin: 10px;
-        height: 80%;
+        width: calc(100% - 20px);
+        max-height: 80%;
         overflow-y: scroll;
-    `;
-    let style = document.createElement("style");
-    style.innerHTML = `
-    div#history-display-div::-webkit-scrollbar {
-        display: none;
-    }
-    `;
-    document.getElementsByTagName("head")[0].appendChild(style);
-
-    // 历史记录表
-    let historytable = document.createElement("table");
-    historytable.innerHTML =
-        "<tr><th style='text-align: center;width: 20%;border-style: dotted;border-width: 0 2px 0 0;border-color: #00000059;'>时间</th><th style='text-align:center;'>标题</th></tr>";
-    historytable.style.cssText = `
-        width: 100%;
         border-style: dotted;
         border-width: 2px;
         border-color: black;
     `;
-    histories.reverse().forEach((history) => {
-        let text =
-            "<tr><td title='最近浏览时间' style='text-align: center;border-style: dotted;border-width: 2px 2px 0 0;border-color: #00000059;'>" +
-            history.time +
-            "</td><td style='padding-left: 7px;border-style: dotted;border-width: 2px 0 0 0;border-color: #00000059;'>" +
-            "<a title='" +
-            history.title +
-            "' target='_blank' href='" +
-            history.url +
-            "'><p style='width: 28vw;white-space: nowrap;line-height: 2vw;height: 2vw;overflow: hidden;text-overflow: ellipsis;'>" +
-            history.title +
-            "</p></a></td></tr>";
-        historytable.innerHTML = historytable.innerHTML + text;
-    });
+    let myStyle = document.createElement("style");
+    myStyle.innerHTML = `
+        div#history-display-div::-webkit-scrollbar {
+            display: none;
+        }
+    `;
+    document.getElementsByTagName("head")[0].appendChild(myStyle);
 
-    historiesDisplayDiv.appendChild(historytable);
+    // 历史记录表
+    let historyTable = document.createElement("table");
+    historyTable.style.cssText = `
+        table-layout: fixed;
+        width: 100%;
+    `;
+
+    let headTime = document.createElement("th");
+    headTime.style.cssText = `
+        height: 1.5vw;
+        text-align: center;
+        border-style: dotted;
+        border-width: 0 2px 0 0;
+        border-color: #00000059;
+    `;
+    headTime.innerHTML = "时间";
+    let headTr = document.createElement("tr");
+    headTr.appendChild(headTime);
+
+    let headTitle = document.createElement("th");
+    headTitle.style.cssText = `
+        width: 80%;
+        text-align:center;
+    `;
+    headTitle.innerHTML = "标题";
+    headTr.appendChild(headTitle);
+    historyTable.appendChild(headTr);
+
+    histories.reverse().forEach((history) => {
+        let tdTime = document.createElement("td");
+        tdTime.title = "最后浏览时间";
+        tdTime.style.cssText = `
+            text-align: center;
+            border-style: dotted;
+            border-width: 2px 2px 0 0;
+            border-color: #00000059;
+        `;
+        tdTime.innerHTML = history.time;
+        let tr = document.createElement("tr");
+        tr.appendChild(tdTime);
+
+        let p = document.createElement("p");
+        p.style.cssText = `
+            line-height: 1.7vw;
+            height: 1.7vw;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        `;
+        p.innerHTML = history.title;
+
+        let a = document.createElement("a");
+        a.href = history.url;
+        a.target = "_blank";
+
+        a.appendChild(p);
+
+        let tdTitle = document.createElement("td");
+        tdTitle.title = history.title;
+        tdTitle.style.cssText = `
+            width: 80%;
+            padding-left: 7px;
+            border-style: dotted;
+            border-width: 2px 0 0 0;
+            border-color: #00000059;
+        `;
+        tdTitle.appendChild(a);
+        tr.appendChild(tdTitle);
+        historyTable.appendChild(tr);
+    });
+    historiesDisplayDiv.appendChild(historyTable);
 
     // 底部功能按钮区
-    let functionButtons = document.createElement("div");
-    functionButtons.style.cssText = `
-        height: 10%;
+    let functionButtonsPanel = document.createElement("div");
+    functionButtonsPanel.style.cssText = `
+        width: 100%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
         margin: 0 10px 10px 10px;
     `;
 
     let functionButtonsStyle = `
-        width: 100px;
+        width: 6vw;
         cursor: pointer;
         border: 2px solid #C97546;
-        font-size: 15px;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
         text-align:center;
-     `;
-
-    // // 自定义外观按钮
-    // let settingsButton = document.createElement("div");
-    // settingsButton.innerHTML = "外观设定";
-    // settingsButton.style.cssText = functionButtonsStyle;
-    // // 自定义外观面板
-    // let settingPanel = document.createElement("div");
-    // settingsButton.style.cssText = `
-    //     border: 2px solid #C97546;
-    // `;
-    // functionButtons.appendChild(settingsButton);
+        background-color: white;
+    `;
 
     // 清空历记录按钮
-    let clearButton = document.createElement("div");
+    let clearButton = document.createElement("button");
     clearButton.innerHTML = "清空历史";
     clearButton.style.cssText = functionButtonsStyle;
     clearButton.addEventListener("click", () => {
         GM_setValue("histories", null);
-        historytable.innerHTML =
-            "<tr><th style='text-align: center;width: 20%;border-style: dotted;border-width: 0 2px 0 0;border-color: #00000059;'>最后浏览时间</th><th style='text-align:center;'>标题</th></tr>";
+        while (historyTable.children.length > 1) {
+            historyTable.removeChild(historyTable.children[1]);
+        }
         alert("历史记录已清空");
     });
-    functionButtons.appendChild(clearButton);
+    functionButtonsPanel.appendChild(clearButton);
 
     historyPanel.appendChild(historiesDisplayDiv);
-    historyPanel.appendChild(functionButtons);
+    historyPanel.appendChild(functionButtonsPanel);
     document.getElementsByTagName("body")[0].appendChild(historyPanel);
 
     // 监听 历史 按钮，开关 历史 面板
