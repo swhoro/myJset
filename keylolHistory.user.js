@@ -31,7 +31,11 @@
             }
         });
         let date = new Date();
-        let time = "" + date.getMonth() + "月" + date.getDay() + "日 " + date.getHours() + ":" + date.getMinutes();
+        let hour = date.getHours();
+        if (hour <= 9) hour = "0" + hour;
+        let minute = date.getMinutes();
+        if (minute <= 9) minute = "0" + minute;
+        let time = "" + date.getMonth() + "月" + date.getDay() + "日 " + hour + ":" + minute;
         thisHistory = {
             url: url,
             title: document.title,
