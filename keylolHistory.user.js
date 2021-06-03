@@ -47,7 +47,6 @@
     }
 
     // 插入 历史 按钮
-    // 插入第几个位置
     let location = 1;
     location = location - 1;
     // 创建新 历史 节点并插入文档中
@@ -136,26 +135,26 @@
         // 历史记录表
         let historyTable = document.createElement("table");
         historyTable.style.cssText = `
-             table-layout: fixed;
-             width: 100%;
-         `;
+            table-layout: fixed;
+            width: 100%;
+        `;
         // 表头
         let headTr = document.createElement("tr");
         let headTime = document.createElement("th");
         headTime.style.cssText = `
-             height: 1.5vw;
-             text-align: center;
-             border-style: dotted;
-             border-width: 0 2px 0 0;
-             border-color: #00000059;
+            height: 1.5vw;
+            text-align: center;
+            border-style: dotted;
+            border-width: 0 2px 0 0;
+            border-color: #00000059;
          `;
         headTime.innerHTML = "时间";
         headTr.appendChild(headTime);
 
         let headTitle = document.createElement("th");
         headTitle.style.cssText = `
-             width: 80%;
-             text-align:center;
+            width: 80%;
+            text-align:center;
          `;
         headTitle.innerHTML = "标题";
         headTr.appendChild(headTitle);
@@ -167,21 +166,21 @@
             let tdTime = document.createElement("td");
             tdTime.title = "最后浏览时间";
             tdTime.style.cssText = `
-                 text-align: center;
-                 border-style: dotted;
-                 border-width: 2px 2px 0 0;
-                 border-color: #00000059;
+                text-align: center;
+                border-style: dotted;
+                border-width: 2px 2px 0 0;
+                border-color: #00000059;
              `;
             tdTime.innerHTML = history.time;
             tr.appendChild(tdTime);
 
             let p = document.createElement("p");
             p.style.cssText = `
-                 line-height: 1.7vw;
-                 height: 1.7vw;
-                 white-space: nowrap;
-                 overflow: hidden;
-                 text-overflow: ellipsis;
+                line-height: 1.7vw;
+                height: 1.7vw;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
              `;
             p.innerHTML = history.title;
 
@@ -193,11 +192,11 @@
             let tdTitle = document.createElement("td");
             tdTitle.title = history.title;
             tdTitle.style.cssText = `
-                 width: 80%;
-                 padding-left: 7px;
-                 border-style: dotted;
-                 border-width: 2px 0 0 0;
-                 border-color: #00000059;
+                width: 80%;
+                padding-left: 7px;
+                border-style: dotted;
+                border-width: 2px 0 0 0;
+                border-color: #00000059;
              `;
             tdTitle.appendChild(a);
             tr.appendChild(tdTitle);
@@ -219,7 +218,7 @@
     historyButton.addEventListener("click", (event) => {
         event.stopPropagation();
 
-        // 如果未初始化面板，则创建面板
+        // 如果未初始化面板，则初始化面板
         if (isDown == 0) {
             fillPanel();
             isDown = 1;
