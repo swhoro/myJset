@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         keylolHistory
 // @namespace    https://github.com/swhoro
-// @version      0.0.3
+// @version      0.0.4
 // @description  为keylol社区添加历史记录
 // @author       Aiden
 // @match        https://keylol.com/*
@@ -32,11 +32,12 @@
             }
         }
         let date = new Date();
+        let month = date.getMonth() + 1;
         let hour = date.getHours();
         if (hour <= 9) hour = "0" + hour;
         let minute = date.getMinutes();
         if (minute <= 9) minute = "0" + minute;
-        let time = "" + date.getMonth() + "月" + date.getDay() + "日 " + hour + ":" + minute;
+        let time = "" + month + "月" + date.getDate() + "日 " + hour + ":" + minute;
         let thisHistory = {
             url: url,
             title: document.title,
