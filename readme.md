@@ -42,6 +42,10 @@ Lazy 为无需 api、懒加载版本（默认）
 
 为 keylol 社区添加历史记录功能，按钮在头像下拉栏
 
+### [hbKeyGetter](https://github.com/swhoro/myJset/raw/master/hbKeyGetter.user.js)
+
+在 hb 月包页面添加一键提取key的按钮，并复制到剪切板
+
 ## CSS 样式文件
 
 ### [baiduReforged](https://github.com/swhoro/myJset/raw/master/baidu.user.css)
