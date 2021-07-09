@@ -46,6 +46,10 @@ Lazy 为无需 api、懒加载版本（默认）
 
 在 hb 月包页面添加一键提取key的按钮，并复制到剪切板
 
+### [currencyTool](https://github.com/swhoro/myJset/raw/master/currencyTool.user.js)
+
+在steamdb上创建汇率转换工具
+
 ## CSS 样式文件
 
 ### [baiduReforged](https://github.com/swhoro/myJset/raw/master/baidu.user.css)
