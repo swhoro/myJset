@@ -23,9 +23,7 @@
     let testReg = new RegExp("^https://keylol.com/t\\d{6}-1-1$");
     if (testReg.test(url)) {
         // 当出现重复帖子时，删除以前历史记录，新增一个历史记录
-        if (GM_getValue(url)) {
-            GM_deleteValue(url);
-        }
+        GM_deleteValue(url);
 
         let date = new Date();
         let month = date.getMonth() + 1;
@@ -228,12 +226,8 @@
             isDown = 1;
         }
 
-        // 控制面板隐藏与显示
-        if (historyPanel.style.display == "none") {
-            historyPanel.style.display = "flex";
-        } else {
-            historyPanel.style.display = "none";
-        }
+        // 显示面板
+        historyPanel.style.display = "flex";
     });
 
     // 点击historyPanel外部可以隐藏面板
