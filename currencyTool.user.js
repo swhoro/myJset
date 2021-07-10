@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         currencyTool
 // @namespace    https://https://github.com/swhoro
-// @version      0.0.1
+// @version      0.0.2
 // @description  在部分页面上创建一个汇率转换工具
 // @author       Aiden
 // @match        https://steamdb.info/*
+// @match        https://store.steampowered.com/app/*
+// @match        https://keylol.com/t*
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_xmlhttpRequest
@@ -26,19 +28,17 @@
     async function setExrate(currency, time) {
         // 获取汇率
         let url = "https://1841964069062455.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/api/getCurrency/?cur=" + currency;
-        // let response = await fetch(baseUrl);
-        // let result = await response.text();
         GM_xmlhttpRequest({
             method: "GET",
             url: url,
             synchronous: true,
-            onload: async (response) => {
+            onload: (response) => {
                 console.log("response is: ", response);
                 exrate = Number(response.responseText);
 
                 // 写入汇率和下次更新汇率时间
                 GM_setValue(currency, exrate);
-                GM_setValue("update_time", time + 3600000 * 12);
+                GM_setValue("update_time", time + 3600 * 1000 * 12);
             },
         });
     }
@@ -63,6 +63,7 @@
         left: 130px;
         padding: 1px;
         margin-bottom: 2px;
+        background-color: #161a21;
     `;
     showDiv.appendChild(show);
     div.appendChild(showDiv);
@@ -75,7 +76,6 @@
         grid-template-columns: 1fr 1fr;
     `;
     let input = document.createElement("input");
-    input.className = "currency-input";
     input.placeholder = "阿根廷比索";
     input.style.cssText = `
         width: 100px;
@@ -84,6 +84,8 @@
         border-width: 0 0 2px 0;
         border-radius: 2px;
         padding-left: 5px;
+        background-color: #161a21;
+        color: white;
     `;
     let go = document.createElement("button");
     go.innerHTML = "GO!";
@@ -101,6 +103,8 @@
         height: 34px;
         padding-left: 5px;
         line-height: 34px;
+        background-color: #161a21;
+        color: white;
     `;
     calculateDiv.appendChild(input);
     calculateDiv.appendChild(go);
@@ -111,10 +115,10 @@
     show.addEventListener("click", () => {
         if (calculateDiv.style.display == "none") {
             calculateDiv.style.display = "grid";
-            show.innerHTML = ">"
+            show.innerHTML = ">";
         } else {
             calculateDiv.style.display = "none";
-            show.innerHTML = "<"
+            show.innerHTML = "<";
         }
     });
 

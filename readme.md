@@ -42,13 +42,17 @@ Lazy 为无需 api、懒加载版本（默认）
 
 为 keylol 社区添加历史记录功能，按钮在头像下拉栏
 
+### [tempkeylolHistory](https://github.com/swhoro/myJset/raw/master/tempkeylolHistory.user.js)
+
+功能同上一脚本，实验用，测试功能是否正常
+
 ### [hbKeyGetter](https://github.com/swhoro/myJset/raw/master/hbKeyGetter.user.js)
 
 在 hb 月包页面添加一键提取key的按钮，并复制到剪切板
 
 ### [currencyTool](https://github.com/swhoro/myJset/raw/master/currencyTool.user.js)
 
-在steamdb上创建汇率转换工具
+在steamdb等页面上创建汇率转换工具
 
 ## CSS 样式文件
 
