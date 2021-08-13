@@ -54,6 +54,10 @@ Lazy 为无需 api、懒加载版本（默认）
 
 在steamdb等页面上创建汇率转换工具
 
+### [biliTools](https://github.com/swhoro/myJset/raw/master/biliTools.user.js)
+
+一些bilibili小功能
+
 ## CSS 样式文件
 
 ### [baiduReforged](https://github.com/swhoro/myJset/raw/master/baidu.user.css)
