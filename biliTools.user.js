@@ -11,7 +11,7 @@
 // 番剧页面选择剧集不再新标签页打开
 (() => {
     let url = window.location.href;
-    let reg = new RegExp("^https://www.bilibili.com/bangumi/media/(\\d|\\w)*$");
+    let reg = new RegExp("^https://www.bilibili.com/bangumi/media/\\S*$");
     if (reg.test(url)) {
         console.log("bili tool is running!");
         let buttons = document.getElementsByClassName("season-slider-list")[0].children;
