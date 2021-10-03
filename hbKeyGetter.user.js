@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         hbKeyGetter
 // @namespace    https://https://github.com/swhoro
-// @version      0.0.2
+// @version      0.0.3
 // @description  将hb key复制到剪切板
 // @author       Aiden
 // @match        https://www.humblebundle.com/downloads?key=*
-// @updateUrl     https://github.com/swhoro/myJset/raw/master/hbKeyGetter.user.js
+// @updateUrl    https://github.com/swhoro/myJset/raw/master/hbKeyGetter.user.js
 // ==/UserScript==
 
 (function () {
@@ -16,6 +16,7 @@
         right: 10%;
         bottom: 10%;
         background-color: white;
+        z-index: 99;
     `;
     document.getElementsByTagName("body")[0].appendChild(button);
 
