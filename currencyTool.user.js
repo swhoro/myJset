@@ -6,7 +6,7 @@
 // @author       Aiden
 // @match        https://steamdb.info/*
 // @match        https://store.steampowered.com/app/*
-// @match        https://keylol.com/t*
+// @match        https://keylol.com/*
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_xmlhttpRequest
