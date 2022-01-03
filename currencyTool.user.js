@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         currencyTool
-// @namespace    https://https://github.com/swhoro
+// @namespace    https://github.com/swhoro
 // @version      0.0.3
 // @description  在部分页面上创建一个汇率转换工具
 // @author       Aiden
