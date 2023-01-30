@@ -2,10 +2,10 @@
 @name         百度Reforged
 @author       Aiden
 @namespace    https://github.com/swhoro
-@version      0.0.8
+@version      0.1.0
 ==/UserStyle== */
-@-moz-document regexp('https://www.baidu.com/s\?\&?((wd)|(ie)|(tn))=.*')
-{
+@-moz-document regexp('https://www.baidu.com/s\?\&?((wd)|(ie)|(tn))=.*') {
+
     /* 头栏 */
     div#head {
         background-color: #f7f7f7;
@@ -94,7 +94,7 @@
         justify-content: center;
     }
 
-    div#content_left > div.c-container {
+    div#content_left>div.c-container {
         text-align: left;
         width: 40vw;
         transition-duration: 0.4s;
@@ -103,15 +103,15 @@
         border-radius: 4px;
     }
 
-    div#content_left > div.c-container:hover {
+    div#content_left>div.c-container:hover {
         box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
     }
 
-    div#content_left > div.c-container h3 {
+    div#content_left>div.c-container h3 {
         font-size: 16px !important;
     }
 
-    div.c-container > div.c-container {
+    div.c-container>div.c-container {
         margin-bottom: 0 !important;
     }
 
@@ -127,7 +127,7 @@
     }
 
     ul.subLink_answer a,
-    ul.subLink_answer a > em {
+    ul.subLink_answer a>em {
         text-decoration: none;
     }
 
@@ -159,6 +159,7 @@
     div.foot-inner {
         text-align: center;
     }
+
     span#help {
         float: none !important;
         padding-right: 150px;
